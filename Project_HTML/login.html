@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="CSS/login.css">
+
+
+
+
+
+    </head>
+
+    <body>
+            <div class="login_background">
+                <div class="login_form">
+                    <h2>Login</h2>
+                    <p id="signinP">Sign In to your account</p>
+                    <div class="form_item1">
+                        <label class="label">
+                            <i class="material-icons">mail_outline</i>
+
+                        </label>
+                        <div class="item">
+                            <input type="text" name="email" placeholder="Email" class="z_input ">
+                        </div>
+                    </div>
+                    <div class="form_item2">
+                        <label class="label">
+                            <i class="material-icons">lock_outline</i>
+                        </label>
+                        <div class="item">
+                            <input type="password" name="password"  placeholder="Password" class="z_input ">
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button id="z_btn">Login</button>
+                        <a id="forgot" href="/forgot">Forgot password ?</a>
+                    </div>
+                    <p id="seperator">OR</p>
+                    <a id="f_btn" href="https://www.facebook.com/v2.11/dialog/oauth?client_id=1767923623218656&amp;scope=email,public_profile&amp;redirect_uri=https://api.zbigz.com/fb-auth&amp;response_type=code">Facebook</a>
+                </div>
+                <div class="register_block"><div class="register_block__content">
+                        <h3>New user ?</h3>
+                        <input type="button" id= "CreaAcc" name="Create" value="Create Account">
+                    </div>
+                </div>
+            </div>
+    </body>
+
+</html>

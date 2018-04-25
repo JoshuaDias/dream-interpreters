@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Creator</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="https://maps.googleapis.com/maps/api/js?&libraries=places&callback=initAutocomplete" async defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300" rel="stylesheet">
+    <script src="JavaScript/addressAutoFill.js"></script>
+    <script src="JavaScript/createdEvent.js"></script>
+
+    <!-- <script src="script/eventValidation.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <img src="Images/DILogo.png" alt="logo" style="float: left;" height="50">
+        </a>
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="post1.html">BLOGS</a>
+            </li>
+            <li>
+                <a href="event-creator.html">EVENTS</a>
+            </li>
+            <li>
+                <a href="information_blog.html">INFORMATION</a>
+            </li>
+            <li>
+                <a href="mentorblog3.html">MENTOR</a>
+            </li>
+            <li>
+                <a href="faq.html">FAQs</a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <img src="Images/onlineevent.png" alt="Image Creator" width="15%" style="float: right; padding:1em;">
+    <header>
+
+        <h1>Create an Event!</h1>
+
+    </header>
+
+    <main>
+        <div class="body-center">
+
+            <div class="container">
+
+
+                <form action="eventcreated.html" id="contactusform" method="get">
+
+                    <label for="title">Title of Event</label>
+                    <span style="color:red; padding-left: 1em;" id="errtitle"></span>
+                    <input type="text" id="title" name="title" placeholder="Enter your title here..">
+
+                    <label for="subject">A little bit about the event</label>
+                    <span style="color:red; padding-left:1em;" id="errsubject"></span>
+                    <textarea id="subject" name="subject" placeholder="Enter your description here" style="height:200px"></textarea>
+                    <div class="container-empty">
+                        <div class="left-div">
+                            <label for="fromdate">From When?</label>
+                            <span style="color:red; padding-left:0;" id="errfromdate"></span>
+                            <input type="date" name="fromdate" id="fromdate">
+                            <br>
+                        </div>
+                        <div class="right-div">
+                            <label for="todate">Until?</label>
+                            <span style="color:red; padding-left:0;" id="errdate"></span>
+                            <input type="date" name="todate" id="todate">
+                            <br>
+                        </div>
+                    </div>
+                    <label for="haslocation">Has Location?</label>
+                    <input type="checkbox" name="haslocation" id="haslocation" onclick="document.getElementById('autocomplete').disabled=!this.checked;"
+                    />
+                    <div id="locationField">
+                        <input id="autocomplete" placeholder="Enter event address" onFocus="geolocate()" type="text" name="eventaddress"></input>
+                    </div>
+                    <div class="container-empty" id="autoaddress">
+                        <div class="left-div">
+                            <label for="street_number">Street Number</label>
+                            <input type="text" name="street_number" id="street_number" disabled="true">
+
+                            <label for="route">Street Name</label>
+                            <input type="text" name="route" id="route" disabled="true">
+
+                            <label for="locality">City</label>
+                            <input type="text" name="locality" id="locality" disabled="true">
+                        </div>
+                        <div class="right-div">
+                            <label for="administrative_area_level_1">State</label>
+                            <input type="text" name="administrative_area_level_1" id="administrative_area_level_1" disabled="true">
+                            <label for="postal_code">Postal Code</label>
+                            <input type="text" name="postal_code" id="postal_code" disabled="true">
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country" disabled="true">
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="container-empty">
+                        <div class="left-div">
+                            <div class="upload-btn-wrapper">
+                                <button class="btn">Upload Event Image</button>
+
+                                <input type="file" alt="Upload Image" name="eventPicture" id="eventPicture" onchange="uploadPreview()">
+
+                            </div>
+
+                        </div>
+                        <div class="right-div">
+                            <img id="preview" alt="your image" width="200" height="200" />
+                        </div>
+                    </div>
+                    <br>
+
+
+                    <input type="submit" value="Submit" id="form-btn" onclick="return validateEvent()">
+                </form>
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <footer style="margin-top:5em;">
+        <div class="footer-content">
+            <h4>The Company</h4>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="aboutus.html"></a>
+                </li>
+                <li>
+                    <a href="contactus.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="faq.html">FAQ's</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h4>Our Journey</h4>
+            <ul>
+                <li>
+                    <a href="#=blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="forum.html">Forum</a>
+                </li>
+                <li>
+                    <a href="missionstatement.html">Mission Statement</a>
+                </li>
+                <li>
+                    <a href="customertestimonials.html">Customer Testimonials</a>
+                </li>
+                <li>
+                    <a href="advisortestimonials.html">Advisor Testimonials</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-content">
+            <h4>For Education</h4>
+            <ul>
+                <li>
+                    <a href="pricing.html">Pricing</a>
+                </li>
+                <li>
+                    <a href="educationalinstitutions.html">Educational Institutions</a>
+                </li>
+                <li>
+                    <a href="tie-ups.html">Corporate Tie-ups</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <ul class="tac">
+            <div class="social-media-icons">
+                <ul>
+                    <li>
+                        <a href="#" class="fa fa-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-linkedin"></a>
+                    </li>
+                </ul>
+            </div>
+            <li>
+                <a href="#">Terms and Conditions</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+            <li>Dream Interpreters &copy; 2018</li>
+
+        </ul>
+
+
+    </footer>
+
+    <script>
+
+        function uploadPreview() {
+            document.getElementById('preview').src = window.URL.createObjectURL(document.getElementById('eventPicture').files[0]);
+            document.getElementById('preview').style.display = 'flex';
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

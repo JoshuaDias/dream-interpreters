@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/home.css">
+
+  <!-- <script src="script/accordian.js"></script>  -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html"><img src="Images/DILogo.png" alt="logo" style="float: left;" height="50" ></a>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="post1.html">BLOGS</a></li>
+      <li><a href="event-creator.html">EVENTS</a></li>
+      <li><a href="information_blog.html">INFORMATION</a></li>
+      <li><a href="mentorblog3.html">MENTOR</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+    </ul>
+  </nav>
+
+
+<div>
+<img class="myslides" src="Images/home.jpg" alt="about_image" width="950" height="350px">
+<img class="myslides" src="Images/image1.jpg" alt="about_image" width="950" height="350px">
+
+</div>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("myslides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+<h2 id="light">Get yourself on the path of success</h2>
+<h2 id="bold">Strategize. Organize. Globalize.</h2>
+<form id="init" action="contactus.html">
+<input type="button" id="contact" value="CONTACT US TODAY!" onclick="location.href='contactus.html'"/>
+</form>
+
+<section>
+<dl>
+  <div id="first">
+  <dt>ABOUT US</dt>
+    <hr>
+    <dd>I'm a paragraph. Click here to add your own text and edit me.
+       It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+        Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to write more.
+      Tell a story and let your users get to know you.</dd>
+    </div>
+    <div id="second">
+      <dt>OUR VISION</dt>
+      <hr>
+        <dd>I'm a paragraph. Click here to add your own text and edit me.
+         It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+          Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to write more.
+        Tell a story and let your users get to know you.</dd>
+      </div>
+      <div id="third">
+        <dt>BLOG ON DESK</dt>
+        <hr>
+          <dd>I'm a paragraph. Click here to add your own text and edit me.
+           It’s easy. Just click “Edit Text” or double click me and you can start adding your own content and make changes to the font.
+            Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to write more.
+          Tell a story and let your users get to know you.</dd>
+        </div>
+</dl>
+</section>
+<footer style="margin-top:5em;">
+    <div class="footer-content">
+    <h4>The Company</h4>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">FAQ's</a></li>
+    </ul>
+  </div>
+  <div class="footer-content">
+    <h4>Our Journey</h4>
+    <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Forum</a></li>
+        <li><a href="#">Mission Statement</a></li>
+        <li><a href="#">Customer Testimonials</a></li>
+        <li><a href="#">Advisor Testimonials</a></li>
+    </ul>
+  </div>
+  <div class="footer-content">
+    <h4>For Education</h4>
+    <ul>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Educational Institutions</a></li>
+        <li><a href="#">Corporate Tie-ups</a></li>
+
+    </ul>
+    </div>
+
+    <ul class="tac">
+        <div class="social-media-icons">
+            <ul>
+              <li>  <a href="#" class="fa fa-facebook"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li>  <a href="#" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+      <li><a href="#">Terms and Conditions</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li>Dream Interpreters &copy; 2018</li>
+
+    </ul>
+
+  </footer>
+</body>
+</html>

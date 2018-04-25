@@ -1,0 +1,127 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Apr 5, 2018, 10:46:48 PM
+    Author     : HaRrY
+*/
+div {
+    display: block;
+}
+
+body{
+  padding-top: 40px;
+  height: 500px;
+}
+
+.form_item1 {
+    padding-bottom: 20px;
+    width: 100%;
+
+}
+i{
+    position: absolute;
+    font-size: 20px;
+    padding: 4px;
+    color: #20a8d8;
+}
+input{
+    width: 80%;
+    padding-left: 30px;
+    padding-right: 20px;
+    height: 25px;
+
+}
+.login_background {
+    display:flex;
+    justify-content: center;
+    padding: 15px;
+}
+.login_background div {
+    border: 1px  #000;
+    margin:2px;
+}
+.login_form {
+    background-color: white;
+    float: left;
+    height: 375px;
+    width: 325px;
+    padding: 50px;
+
+}
+
+.register_block {
+    float: right;
+    height: 325px;
+    width: 325px;
+    background-color: #20a8d8;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2em;
+    padding-top: 150px;
+}
+div h3{
+   background-color: #20a8d8;
+}
+.item {
+    font-size : 24px;
+}
+.actions {
+    padding-top: 20px;
+}
+#forgot{
+    float: right;
+    padding-top: 10px;
+    padding-right: 24px;
+    text-decoration: none;
+    color:  #20a8d8;
+
+}
+#z_btn {
+    background-color: #20a8d8;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+#f_btn{
+    background-color:#3a4c8e;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 80%;
+    font-size: 15px;
+    height: 20px;
+}
+
+#f_btn:hover{
+  filter: brightness(85%);
+}
+#signinP{
+    color: #8c8c8c
+}
+html{
+    background-color: #f2f2f2;
+}
+
+#CreaAcc{
+  background-color:#289bc9;
+  color: white;
+  border: 2px solid #289bc9;
+  outline: none;
+  text-align: center;
+  height: 35px;
+}
+
+#CreaAcc:hover{
+  filter: brightness(85%);
+}
